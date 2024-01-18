@@ -1,0 +1,31 @@
+PASOS PREVIOS AL EJERCICIO
+git clone https://github.com/asalber/libro-git.git
+cd libro-git
+git reset --hard 8c808
+git remote remove origin
+EJERCICIO 1
+git log
+mkdir capitulos
+echo Git es un sistema de control de versiones ideado por Linux Torvalds. >>capitulos/capitulo1.txt
+git add 
+git commit -m "Añadido capítulo 1"
+git log
+EJERCICIO 2
+echo El flujo de trabajo básico con Git consiste en: >>capitulos/capitulo1.txt
+echo 1- Hacer cambios en el repositorio >>capitulos/capitulo1.txt
+echo 2- Añadir los cambios a la zona de intercambio temporal. >>capitulos/capitulo1.txt
+echo 3- Hacer un commit de los cambios. >>capitulos/capitulo1.txt
+git add
+git commit -m "Añadido capítulo 2"
+git diff HEAD~2..HEAD
+EJERCICIO 3 
+echo Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
+git add 
+git commit -m "Añadido capítulo 3."
+git log 
+git diff &lt;codigo hash de la primera version>..HEAD
+EJERCICIO 4 
+echo Capitulo 5: Conceptos avanzados >> indice.txt
+git add
+git commit -m "Añadido capítulo 5 al índice."
+git annotate indice.txt
